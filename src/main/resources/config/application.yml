@@ -103,11 +103,11 @@ spring:
       client:
         provider:
           oidc:
-            issuer-uri: https://dev-408073-admin.okta.com/oauth2/default
+            issuer-uri: https://dev-408073.okta.com/oauth2/default
         registration:
           oidc:
-            client-id: 0oaxo5jhiJmA00We4356
-            client-secret: web_app
+            client-id: 0oay5zdm99eBaDLuD356
+            client-secret: HTEc9Vz6a6jRzhAQnywiTNHw4JjW_ZqHEe_Yrs0Z
 
 server:
   servlet:
