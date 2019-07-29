@@ -1,0 +1,19 @@
+{
+    "name": "StarGate",
+    "fields": [
+        {
+            "fieldName": "role",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190729204958",
+    "entityTableName": "star_gate",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

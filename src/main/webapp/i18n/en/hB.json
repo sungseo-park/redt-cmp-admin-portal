@@ -1,0 +1,23 @@
+{
+  "cmpAdminPortalApp": {
+    "hB": {
+      "home": {
+        "title": "HBS",
+        "createLabel": "Create a new HB",
+        "createOrEditLabel": "Create or edit a HB",
+        "notFound": "No HB found"
+      },
+      "created": "A new HB is created with identifier {{ param }}",
+      "updated": "A HB is updated with identifier {{ param }}",
+      "deleted": "A HB is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete HB {{ id }}?"
+      },
+      "detail": {
+        "title": "HB"
+      },
+      "role": "Role",
+      "access": "Access"
+    }
+  }
+}

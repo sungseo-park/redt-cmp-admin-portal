@@ -1,0 +1,41 @@
+{
+    "name": "CostManagementPlatform",
+    "fields": [
+        {
+            "fieldName": "role",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "access",
+            "fieldType": "Access",
+            "fieldValues": "FULL,LIMITED"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "hB",
+            "otherEntityRelationshipName": "costManagementPlatform",
+            "relationshipName": "hb",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "starGate",
+            "otherEntityRelationshipName": "costManagementPlatform",
+            "relationshipName": "stargate",
+            "otherEntityField": "role",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190729204959",
+    "entityTableName": "cost_management_platform",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
