@@ -3,6 +3,7 @@ package com.cmp.adminportal.web.rest
 import com.cmp.adminportal.domain.CostManagementPlatform
 import com.cmp.adminportal.domain.StarGate
 import com.cmp.adminportal.repository.CostManagementPlatformRepository
+import com.cmp.adminportal.repository.HonestBuildingRepository
 import com.cmp.adminportal.repository.StarGateRepository
 import com.cmp.adminportal.web.rest.errors.BadRequestAlertException
 
@@ -35,7 +36,8 @@ import java.net.URISyntaxException
 @RequestMapping("/api")
 class StarGateResource(
     private val starGateRepository: StarGateRepository,
-    private val costManagementPlatformRepository: CostManagementPlatformRepository
+    private val costManagementPlatformRepository: CostManagementPlatformRepository,
+    private val honestBuildingRepository: HonestBuildingRepository
 ) {
 
     private val log = LoggerFactory.getLogger(this.javaClass)
@@ -63,7 +65,7 @@ class StarGateResource(
             role = result.role
         )
         // Initialize an instance of CMP Resource
-        val cmpResource = CostManagementPlatformResource(costManagementPlatformRepository)
+        val cmpResource = CostManagementPlatformResource(costManagementPlatformRepository, honestBuildingRepository)
         // Create a new data with CMP object in CMP
         cmpResource.createCostManagementPlatform(costManagementPlatform)
 

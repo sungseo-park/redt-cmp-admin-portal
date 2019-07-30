@@ -1,7 +1,9 @@
 package com.cmp.adminportal.web.rest
 
 import com.cmp.adminportal.domain.CostManagementPlatform
+import com.cmp.adminportal.domain.HonestBuilding
 import com.cmp.adminportal.repository.CostManagementPlatformRepository
+import com.cmp.adminportal.repository.HonestBuildingRepository
 import com.cmp.adminportal.web.rest.errors.BadRequestAlertException
 
 import io.github.jhipster.web.util.HeaderUtil
@@ -32,7 +34,8 @@ import java.net.URISyntaxException
 @RestController
 @RequestMapping("/api")
 class CostManagementPlatformResource(
-    private val costManagementPlatformRepository: CostManagementPlatformRepository
+    private val costManagementPlatformRepository: CostManagementPlatformRepository,
+    private val honestBuildingRepository: HonestBuildingRepository
 ) {
 
     private val log = LoggerFactory.getLogger(this.javaClass)
@@ -54,6 +57,17 @@ class CostManagementPlatformResource(
             throw BadRequestAlertException("A new costManagementPlatform cannot already have an ID", ENTITY_NAME, "idexists")
         }
         val result = costManagementPlatformRepository.save(costManagementPlatform)
+
+        // Create a HB object with role and access from CMP
+        val honestBuilding = HonestBuilding(
+            role = result.role,
+            access = result.access
+        )
+        // Initialize an instance of HB Resource
+        val hbResource = HonestBuildingResource(honestBuildingRepository)
+        // Create a new data with HB object in HB
+        hbResource.createHonestBuilding(honestBuilding)
+
         return ResponseEntity.created(URI("/api/cost-management-platforms/" + result.id))
             .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.id.toString()))
             .body(result)
