@@ -41,6 +41,12 @@ export class CostManagementPlatformDetail extends React.Component<ICostManagemen
               </span>
             </dt>
             <dd>{costManagementPlatformEntity.access}</dd>
+            <dt>
+              <span id="hbId">
+                <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.hbId">Role</Translate>
+              </span>
+            </dt>
+            <dd>{costManagementPlatformEntity.hbId}</dd>
             {/*<dt>*/}
             {/*  <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.honestbuilding">Honestbuilding</Translate>*/}
             {/*</dt>*/}

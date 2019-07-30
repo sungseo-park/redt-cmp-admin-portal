@@ -10,6 +10,7 @@ export interface ICostManagementPlatform {
   id?: number;
   role?: string;
   access?: Access;
+  hbId?: number;
   honestbuilding?: IHonestBuilding;
   stargate?: IStarGate;
 }

@@ -37,6 +37,9 @@ class CostManagementPlatform(
     @Column(name = "access")
     var access: Access? = Access.LIMITED,
 
+    @Column(name = "hbid")
+    var hbId: Long? = null,
+
     @OneToOne
     @JoinColumn(unique = true)
     var honestbuilding: HonestBuilding? = null,
@@ -63,6 +66,7 @@ class CostManagementPlatform(
         "id=$id" +
         ", role='$role'" +
         ", access='$access'" +
+        ", hbId='$hbId" +
         "}"
 
     companion object {

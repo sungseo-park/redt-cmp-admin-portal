@@ -83,15 +83,11 @@ export class CostManagementPlatformUpdate extends React.Component<ICostManagemen
           <Col md="8">
             {!isNew ? (
               <h2 id="cmpAdminPortalApp.costManagementPlatform.home.editAccess">
-                <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.home.editAccess">
-                  Edit a Access
-                </Translate>
+                <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.home.editAccess">Edit a Access</Translate>
               </h2>
             ) : (
               <h2 id="cmpAdminPortalApp.costManagementPlatform.home.createRole">
-                <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.home.createRole">
-                  Create a new Role
-                </Translate>
+                <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.home.createRole">Create a new Role</Translate>
               </h2>
             )}
             {/*<h2 id="cmpAdminPortalApp.costManagementPlatform.home.createOrEditLabel">*/}
@@ -120,7 +116,14 @@ export class CostManagementPlatformUpdate extends React.Component<ICostManagemen
                       <Label id="roleLabel" for="cost-management-platform-role">
                         <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.role">Role</Translate>
                       </Label>
-                      <AvInput id="cost-management-platform-role" type="text" name="role" required readOnly/>
+                      <AvInput id="cost-management-platform-role" type="text" name="role" required readOnly />
+                      {/*<AvField id="cost-management-platform-role" type="text" name="role" />*/}
+                    </AvGroup>
+                    <AvGroup>
+                      <Label id="hbId" for="cost-management-platform-hbId">
+                        <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.hbId">hbId</Translate>
+                      </Label>
+                      <AvInput id="cost-management-platform-hbId" type="text" name="hbId" required readOnly />
                       {/*<AvField id="cost-management-platform-role" type="text" name="role" />*/}
                     </AvGroup>
                     <AvGroup>
@@ -149,6 +152,12 @@ export class CostManagementPlatformUpdate extends React.Component<ICostManagemen
                       <AvField id="cost-management-platform-role" type="text" name="role" />
                     </AvGroup>
                     <AvGroup>
+                      <Label id="hbId" for="cost-management-platform-hbId">
+                        <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.hbId">hbId</Translate>
+                      </Label>
+                      <AvInput id="cost-management-platform-hbId" type="text" name="hbId" required readOnly />
+                    </AvGroup>
+                    <AvGroup>
                       <Label id="accessLabel" for="cost-management-platform-access">
                         <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.access">Access</Translate>
                       </Label>
@@ -164,15 +173,7 @@ export class CostManagementPlatformUpdate extends React.Component<ICostManagemen
                       </AvInput>
                     </AvGroup>
                   </div>
-                  )
-                }
-                {/*<AvGroup>*/}
-                {/*  <Label id="roleLabel" for="cost-management-platform-role">*/}
-                {/*    <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.role">Role</Translate>*/}
-                {/*  </Label>*/}
-                {/*  <AvInput id="cost-management-platform-role" type="text" name="role" required readOnly/>*/}
-                {/*  /!*<AvField id="cost-management-platform-role" type="text" name="role" />*!/*/}
-                {/*</AvGroup>*/}
+                )}
                 {/*<AvGroup>*/}
                 {/*  <Label id="accessLabel" for="cost-management-platform-access">*/}
                 {/*    <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.access">Access</Translate>*/}

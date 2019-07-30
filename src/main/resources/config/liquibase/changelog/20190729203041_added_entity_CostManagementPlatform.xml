@@ -19,6 +19,9 @@
             <column name="role" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
+            <column name="hbId" type="bigint">
+                <constraints nullable="true" />
+            </column>
 
             <column name="access" type="varchar(255)">
                 <constraints nullable="true" />
