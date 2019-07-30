@@ -63,8 +63,10 @@ class CostManagementPlatformResource(
             role = result.role,
             access = result.access
         )
+
         // Initialize an instance of HB Resource
         val hbResource = HonestBuildingResource(honestBuildingRepository)
+
         // Create a new data with HB object in HB
         var hbResult = hbResource.createHonestBuilding(honestBuilding)
 
@@ -101,13 +103,16 @@ class CostManagementPlatformResource(
 
         // Create a HB object with role and access from CMP
         val honestBuilding = HonestBuilding(
+            id = result.honestbuilding!!.id,
             role = result.role,
             access = result.access
         )
+
         // Initialize an instance of HB Resource
         val hbResource = HonestBuildingResource(honestBuildingRepository)
-        // Create a new data with HB object in HB
-        var hbResult = hbResource.getHonestBuilding(id = honestBuilding.body.id)
+
+        // Update HB with a new HB object
+        hbResource.updateHonestBuilding(honestBuilding)
 
         return ResponseEntity.ok()
             .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, costManagementPlatform.id.toString()))

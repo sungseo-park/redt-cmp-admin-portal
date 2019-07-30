@@ -97,12 +97,12 @@ export class StarGate extends React.Component<IStarGateProps, IStarGateState> {
                             <Translate contentKey="entity.action.edit">Edit</Translate>
                           </span>
                         </Button>
-                        <Button tag={Link} to={`${match.url}/${starGate.id}/delete`} color="danger" size="sm">
-                          <FontAwesomeIcon icon="trash" />{' '}
-                          <span className="d-none d-md-inline">
-                            <Translate contentKey="entity.action.delete">Delete</Translate>
-                          </span>
-                        </Button>
+                        {/*<Button tag={Link} to={`${match.url}/${starGate.id}/delete`} color="danger" size="sm">*/}
+                        {/*  <FontAwesomeIcon icon="trash" />{' '}*/}
+                        {/*  <span className="d-none d-md-inline">*/}
+                        {/*    <Translate contentKey="entity.action.delete">Delete</Translate>*/}
+                        {/*  </span>*/}
+                        {/*</Button>*/}
                       </div>
                     </td>
                   </tr>

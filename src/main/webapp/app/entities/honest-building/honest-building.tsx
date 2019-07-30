@@ -103,12 +103,12 @@ export class HonestBuilding extends React.Component<IHonestBuildingProps, IHones
                             <Translate contentKey="entity.action.edit">Edit</Translate>
                           </span>
                         </Button>
-                        <Button tag={Link} to={`${match.url}/${honestBuilding.id}/delete`} color="danger" size="sm">
-                          <FontAwesomeIcon icon="trash" />{' '}
-                          <span className="d-none d-md-inline">
-                            <Translate contentKey="entity.action.delete">Delete</Translate>
-                          </span>
-                        </Button>
+                        {/*<Button tag={Link} to={`${match.url}/${honestBuilding.id}/delete`} color="danger" size="sm">*/}
+                        {/*  <FontAwesomeIcon icon="trash" />{' '}*/}
+                        {/*  <span className="d-none d-md-inline">*/}
+                        {/*    <Translate contentKey="entity.action.delete">Delete</Translate>*/}
+                        {/*  </span>*/}
+                        {/*</Button>*/}
                       </div>
                     </td>
                   </tr>
