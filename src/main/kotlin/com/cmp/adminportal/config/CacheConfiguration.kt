@@ -38,9 +38,6 @@ class CacheConfiguration(jHipsterProperties: JHipsterProperties) {
             createCache(cm, com.cmp.adminportal.domain.User::class.java.name)
             createCache(cm, com.cmp.adminportal.domain.Authority::class.java.name)
             createCache(cm, com.cmp.adminportal.domain.User::class.java.name + ".authorities")
-            createCache(cm, com.cmp.adminportal.domain.StarGate::class.java.name)
-            createCache(cm, com.cmp.adminportal.domain.CostManagementPlatform::class.java.name)
-            createCache(cm, com.cmp.adminportal.domain.HonestBuilding::class.java.name)
             // jhipster-needle-ehcache-add-entry
         }
     }
