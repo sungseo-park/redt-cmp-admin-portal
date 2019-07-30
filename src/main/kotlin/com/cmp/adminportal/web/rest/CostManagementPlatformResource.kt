@@ -66,7 +66,16 @@ class CostManagementPlatformResource(
         // Initialize an instance of HB Resource
         val hbResource = HonestBuildingResource(honestBuildingRepository)
         // Create a new data with HB object in HB
-        hbResource.createHonestBuilding(honestBuilding)
+        var hbResult = hbResource.createHonestBuilding(honestBuilding)
+
+        // Create a new HB object including HB ID
+        var newhb = HonestBuilding(
+            id = hbResult.body.id
+        )
+        costManagementPlatform.honestbuilding = newhb
+
+        // Update the CPM data with hbId
+        updateCostManagementPlatform(costManagementPlatform)
 
         return ResponseEntity.created(URI("/api/cost-management-platforms/" + result.id))
             .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.id.toString()))
