@@ -54,13 +54,13 @@ export class CostManagementPlatform extends React.Component<ICostManagementPlatf
       <div>
         <h2 id="cost-management-platform-heading">
           <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.home.title">Cost Management Platforms</Translate>
-          <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
-            <FontAwesomeIcon icon="plus" />
-            &nbsp;
-            <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.home.createRole">
-              Create a new Role
-            </Translate>
-          </Link>
+          {/*<Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">*/}
+          {/*  <FontAwesomeIcon icon="plus" />*/}
+          {/*  &nbsp;*/}
+          {/*  <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.home.createRole">*/}
+          {/*    Create a new Role*/}
+          {/*  </Translate>*/}
+          {/*</Link>*/}
         </h2>
         <div className="table-responsive">
           {costManagementPlatformList && costManagementPlatformList.length > 0 ? (
@@ -143,12 +143,12 @@ export class CostManagementPlatform extends React.Component<ICostManagementPlatf
                             <Translate contentKey="entity.action.edit">Edit</Translate>
                           </span>
                         </Button>
-                        <Button tag={Link} to={`${match.url}/${costManagementPlatform.id}/delete`} color="danger" size="sm">
-                          <FontAwesomeIcon icon="trash" />{' '}
-                          <span className="d-none d-md-inline">
-                            <Translate contentKey="entity.action.delete">Delete</Translate>
-                          </span>
-                        </Button>
+                        {/*<Button tag={Link} to={`${match.url}/${costManagementPlatform.id}/delete`} color="danger" size="sm">*/}
+                        {/*  <FontAwesomeIcon icon="trash" />{' '}*/}
+                        {/*  <span className="d-none d-md-inline">*/}
+                        {/*    <Translate contentKey="entity.action.delete">Delete</Translate>*/}
+                        {/*  </span>*/}
+                        {/*</Button>*/}
                       </div>
                     </td>
                   </tr>

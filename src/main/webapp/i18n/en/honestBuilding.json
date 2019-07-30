@@ -2,7 +2,7 @@
   "cmpAdminPortalApp": {
     "honestBuilding": {
       "home": {
-        "title": "Honest Buildings",
+        "title": "Honest Building",
         "createLabel": "Create a new Honest Building",
         "createOrEditLabel": "Create or edit a Honest Building",
         "notFound": "No Honest Building found"

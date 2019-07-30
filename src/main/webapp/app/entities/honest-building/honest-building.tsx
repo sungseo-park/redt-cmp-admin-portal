@@ -54,11 +54,11 @@ export class HonestBuilding extends React.Component<IHonestBuildingProps, IHones
       <div>
         <h2 id="honest-building-heading">
           <Translate contentKey="cmpAdminPortalApp.honestBuilding.home.title">Honest Buildings</Translate>
-          <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
-            <FontAwesomeIcon icon="plus" />
-            &nbsp;
-            <Translate contentKey="cmpAdminPortalApp.honestBuilding.home.createLabel">Create new Honest Building</Translate>
-          </Link>
+          {/*<Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">*/}
+          {/*  <FontAwesomeIcon icon="plus" />*/}
+          {/*  &nbsp;*/}
+          {/*  <Translate contentKey="cmpAdminPortalApp.honestBuilding.home.createLabel">Create new Honest Building</Translate>*/}
+          {/*</Link>*/}
         </h2>
         <div className="table-responsive">
           {honestBuildingList && honestBuildingList.length > 0 ? (
