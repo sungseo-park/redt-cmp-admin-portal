@@ -1,0 +1,24 @@
+{
+    "name": "HonestBuilding",
+    "fields": [
+        {
+            "fieldName": "role",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "access",
+            "fieldType": "Access",
+            "fieldValues": "FULL,LIMITED"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190729203042",
+    "entityTableName": "honest_building",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

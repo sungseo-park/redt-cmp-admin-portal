@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity CostManagementPlatform.
+    -->
+    <changeSet id="20190729203041-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="honestbuilding_id"
+                                 baseTableName="cost_management_platform"
+                                 constraintName="fk_cost_management_platform_honestbuilding_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="honest_building"/>
+
+        <addForeignKeyConstraint baseColumnNames="stargate_id"
+                                 baseTableName="cost_management_platform"
+                                 constraintName="fk_cost_management_platform_stargate_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="star_gate"/>
+
+    </changeSet>
+</databaseChangeLog>
