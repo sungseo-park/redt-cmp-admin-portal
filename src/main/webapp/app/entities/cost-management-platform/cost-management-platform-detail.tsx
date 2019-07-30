@@ -41,18 +41,18 @@ export class CostManagementPlatformDetail extends React.Component<ICostManagemen
               </span>
             </dt>
             <dd>{costManagementPlatformEntity.access}</dd>
-            <dt>
-              <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.honestbuilding">Honestbuilding</Translate>
-            </dt>
-            <dd>{costManagementPlatformEntity.honestbuilding ? costManagementPlatformEntity.honestbuilding.role : ''}</dd>
-            <dt>
-              <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.honestbuilding">Honestbuilding</Translate>
-            </dt>
-            <dd>{costManagementPlatformEntity.honestbuilding ? costManagementPlatformEntity.honestbuilding.access : ''}</dd>
-            <dt>
-              <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.stargate">Stargate</Translate>
-            </dt>
-            <dd>{costManagementPlatformEntity.stargate ? costManagementPlatformEntity.stargate.role : ''}</dd>
+            {/*<dt>*/}
+            {/*  <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.honestbuilding">Honestbuilding</Translate>*/}
+            {/*</dt>*/}
+            {/*<dd>{costManagementPlatformEntity.honestbuilding ? costManagementPlatformEntity.honestbuilding.role : ''}</dd>*/}
+            {/*<dt>*/}
+            {/*  <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.honestbuilding">Honestbuilding</Translate>*/}
+            {/*</dt>*/}
+            {/*<dd>{costManagementPlatformEntity.honestbuilding ? costManagementPlatformEntity.honestbuilding.access : ''}</dd>*/}
+            {/*<dt>*/}
+            {/*  <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.stargate">Stargate</Translate>*/}
+            {/*</dt>*/}
+            {/*<dd>{costManagementPlatformEntity.stargate ? costManagementPlatformEntity.stargate.role : ''}</dd>*/}
           </dl>
           <Button tag={Link} to="/entity/cost-management-platform" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

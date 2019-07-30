@@ -1,6 +1,8 @@
 package com.cmp.adminportal.web.rest
 
+import com.cmp.adminportal.domain.CostManagementPlatform
 import com.cmp.adminportal.domain.StarGate
+import com.cmp.adminportal.repository.CostManagementPlatformRepository
 import com.cmp.adminportal.repository.StarGateRepository
 import com.cmp.adminportal.web.rest.errors.BadRequestAlertException
 
@@ -32,7 +34,8 @@ import java.net.URISyntaxException
 @RestController
 @RequestMapping("/api")
 class StarGateResource(
-    private val starGateRepository: StarGateRepository
+    private val starGateRepository: StarGateRepository,
+    private val costManagementPlatformRepository: CostManagementPlatformRepository
 ) {
 
     private val log = LoggerFactory.getLogger(this.javaClass)
@@ -54,6 +57,16 @@ class StarGateResource(
             throw BadRequestAlertException("A new starGate cannot already have an ID", ENTITY_NAME, "idexists")
         }
         val result = starGateRepository.save(starGate)
+
+        // Create a CMP object using a role from SG
+        val costManagementPlatform = CostManagementPlatform(
+            role = result.role
+        )
+        // Initialize an instance of CMP Resource
+        val cmpResource = CostManagementPlatformResource(costManagementPlatformRepository)
+        // Create a new data with CMP object in CMP
+        cmpResource.createCostManagementPlatform(costManagementPlatform)
+
         return ResponseEntity.created(URI("/api/star-gates/" + result.id))
             .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.id.toString()))
             .body(result)

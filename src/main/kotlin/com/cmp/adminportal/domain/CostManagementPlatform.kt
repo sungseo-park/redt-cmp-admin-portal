@@ -35,7 +35,7 @@ class CostManagementPlatform(
 
     @Enumerated(EnumType.STRING)
     @Column(name = "access")
-    var access: Access? = null,
+    var access: Access? = Access.LIMITED,
 
     @OneToOne
     @JoinColumn(unique = true)

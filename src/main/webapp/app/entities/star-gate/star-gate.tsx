@@ -57,7 +57,7 @@ export class StarGate extends React.Component<IStarGateProps, IStarGateState> {
           <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
             <FontAwesomeIcon icon="plus" />
             &nbsp;
-            <Translate contentKey="cmpAdminPortalApp.starGate.home.createLabel">Create new Star Gate</Translate>
+            <Translate contentKey="cmpAdminPortalApp.starGate.home.createRole">Create a new Role</Translate>
           </Link>
         </h2>
         <div className="table-responsive">

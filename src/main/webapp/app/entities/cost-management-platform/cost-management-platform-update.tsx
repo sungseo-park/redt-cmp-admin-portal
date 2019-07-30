@@ -81,11 +81,24 @@ export class CostManagementPlatformUpdate extends React.Component<ICostManagemen
       <div>
         <Row className="justify-content-center">
           <Col md="8">
-            <h2 id="cmpAdminPortalApp.costManagementPlatform.home.createOrEditLabel">
-              <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.home.createOrEditLabel">
-                Create or edit a CostManagementPlatform
-              </Translate>
-            </h2>
+            {!isNew ? (
+              <h2 id="cmpAdminPortalApp.costManagementPlatform.home.editAccess">
+                <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.home.editAccess">
+                  Edit a Access
+                </Translate>
+              </h2>
+            ) : (
+              <h2 id="cmpAdminPortalApp.costManagementPlatform.home.createRole">
+                <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.home.createRole">
+                  Create a new Role
+                </Translate>
+              </h2>
+            )}
+            {/*<h2 id="cmpAdminPortalApp.costManagementPlatform.home.createOrEditLabel">*/}
+            {/*  <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.home.createOrEditLabel">*/}
+            {/*    Create or edit a CostManagementPlatform*/}
+            {/*  </Translate>*/}
+            {/*</h2>*/}
           </Col>
         </Row>
         <Row className="justify-content-center">
@@ -95,79 +108,131 @@ export class CostManagementPlatformUpdate extends React.Component<ICostManagemen
             ) : (
               <AvForm model={isNew ? {} : costManagementPlatformEntity} onSubmit={this.saveEntity}>
                 {!isNew ? (
-                  <AvGroup>
-                    <Label for="cost-management-platform-id">
-                      <Translate contentKey="global.field.id">ID</Translate>
-                    </Label>
-                    <AvInput id="cost-management-platform-id" type="text" className="form-control" name="id" required readOnly />
-                  </AvGroup>
-                ) : null}
-                <AvGroup>
-                  <Label id="roleLabel" for="cost-management-platform-role">
-                    <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.role">Role</Translate>
-                  </Label>
-                  <AvField id="cost-management-platform-role" type="text" name="role" />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="accessLabel" for="cost-management-platform-access">
-                    <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.access">Access</Translate>
-                  </Label>
-                  <AvInput
-                    id="cost-management-platform-access"
-                    type="select"
-                    className="form-control"
-                    name="access"
-                    value={(!isNew && costManagementPlatformEntity.access) || 'FULL'}
-                  >
-                    <option value="FULL">{translate('cmpAdminPortalApp.Access.FULL')}</option>
-                    <option value="LIMITED">{translate('cmpAdminPortalApp.Access.LIMITED')}</option>
-                  </AvInput>
-                </AvGroup>
-                <AvGroup>
-                  <Label for="cost-management-platform-honestbuilding">
-                    <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.honestbuilding">Honestbuilding</Translate>
-                  </Label>
-                  <AvInput id="cost-management-platform-honestbuilding" type="select" className="form-control" name="honestbuilding.id">
-                    <option value="" key="0" />
-                    {honestBuildings
-                      ? honestBuildings.map(otherEntity => (
-                          <option value={otherEntity.id} key={otherEntity.id}>
-                            {otherEntity.role}
-                          </option>
-                        ))
-                      : null}
-                  </AvInput>
-                </AvGroup>
-                <AvGroup>
-                  <Label for="cost-management-platform-honestbuilding">
-                    <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.honestbuilding">Honestbuilding</Translate>
-                  </Label>
-                  <AvInput id="cost-management-platform-honestbuilding" type="select" className="form-control" name="honestbuilding.id">
-                    <option value="" key="0" />
-                    {honestBuildings
-                      ? honestBuildings.map(otherEntity => (
-                          <option value={otherEntity.id} key={otherEntity.id}>
-                            {otherEntity.access}
-                          </option>
-                        ))
-                      : null}
-                  </AvInput>
-                </AvGroup>
-                <AvGroup>
-                  <Label for="cost-management-platform-stargate">
-                    <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.stargate">Stargate</Translate>
-                  </Label>
-                  <AvInput id="cost-management-platform-stargate" type="select" className="form-control" name="stargate.id">
-                    <option value="" key="0" />
-                    {starGates
-                      ? starGates.map(otherEntity => (
-                          <option value={otherEntity.id} key={otherEntity.id}>
-                            {otherEntity.role}
-                          </option>
-                        ))
-                      : null}
-                  </AvInput>
-                </AvGroup>
+                  // Edit Mode
+                  <div>
+                    <AvGroup>
+                      <Label for="cost-management-platform-id">
+                        <Translate contentKey="global.field.id">ID</Translate>
+                      </Label>
+                      <AvInput id="cost-management-platform-id" type="text" className="form-control" name="id" required readOnly />
+                    </AvGroup>
+                    <AvGroup>
+                      <Label id="roleLabel" for="cost-management-platform-role">
+                        <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.role">Role</Translate>
+                      </Label>
+                      <AvInput id="cost-management-platform-role" type="text" name="role" required readOnly/>
+                      {/*<AvField id="cost-management-platform-role" type="text" name="role" />*/}
+                    </AvGroup>
+                    <AvGroup>
+                      <Label id="accessLabel" for="cost-management-platform-access">
+                        <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.access">Access</Translate>
+                      </Label>
+                      <AvInput
+                        id="cost-management-platform-access"
+                        type="select"
+                        className="form-control"
+                        name="access"
+                        value={(!isNew && costManagementPlatformEntity.access) || 'LIMITED'}
+                      >
+                        <option value="LIMITED">{translate('cmpAdminPortalApp.Access.LIMITED')}</option>
+                        <option value="FULL">{translate('cmpAdminPortalApp.Access.FULL')}</option>
+                      </AvInput>
+                    </AvGroup>
+                  </div>
+                ) : (
+                  // New Mode
+                  <div>
+                    <AvGroup>
+                      <Label id="roleLabel" for="cost-management-platform-role">
+                        <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.role">Role</Translate>
+                      </Label>
+                      <AvField id="cost-management-platform-role" type="text" name="role" />
+                    </AvGroup>
+                    <AvGroup>
+                      <Label id="accessLabel" for="cost-management-platform-access">
+                        <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.access">Access</Translate>
+                      </Label>
+                      <AvInput
+                        id="cost-management-platform-access"
+                        type="select"
+                        className="form-control"
+                        name="access"
+                        value={(!isNew && costManagementPlatformEntity.access) || 'LIMITED'}
+                      >
+                        <option value="LIMITED">{translate('cmpAdminPortalApp.Access.LIMITED')}</option>
+                        <option value="FULL">{translate('cmpAdminPortalApp.Access.FULL')}</option>
+                      </AvInput>
+                    </AvGroup>
+                  </div>
+                  )
+                }
+                {/*<AvGroup>*/}
+                {/*  <Label id="roleLabel" for="cost-management-platform-role">*/}
+                {/*    <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.role">Role</Translate>*/}
+                {/*  </Label>*/}
+                {/*  <AvInput id="cost-management-platform-role" type="text" name="role" required readOnly/>*/}
+                {/*  /!*<AvField id="cost-management-platform-role" type="text" name="role" />*!/*/}
+                {/*</AvGroup>*/}
+                {/*<AvGroup>*/}
+                {/*  <Label id="accessLabel" for="cost-management-platform-access">*/}
+                {/*    <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.access">Access</Translate>*/}
+                {/*  </Label>*/}
+                {/*  <AvInput*/}
+                {/*    id="cost-management-platform-access"*/}
+                {/*    type="select"*/}
+                {/*    className="form-control"*/}
+                {/*    name="access"*/}
+                {/*    value={(!isNew && costManagementPlatformEntity.access) || 'LIMITED'}*/}
+                {/*  >*/}
+                {/*    <option value="LIMITED">{translate('cmpAdminPortalApp.Access.LIMITED')}</option>*/}
+                {/*    <option value="FULL">{translate('cmpAdminPortalApp.Access.FULL')}</option>*/}
+                {/*  </AvInput>*/}
+                {/*</AvGroup>*/}
+                {/*<AvGroup>*/}
+                {/*  <Label for="cost-management-platform-honestbuilding">*/}
+                {/*    <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.honestbuilding">Honestbuilding</Translate>*/}
+                {/*  </Label>*/}
+                {/*  <AvInput id="cost-management-platform-honestbuilding" type="select" className="form-control" name="honestbuilding.id">*/}
+                {/*    <option value="" key="0" />*/}
+                {/*    {honestBuildings*/}
+                {/*      ? honestBuildings.map(otherEntity => (*/}
+                {/*          <option value={otherEntity.id} key={otherEntity.id}>*/}
+                {/*            {otherEntity.role}*/}
+                {/*          </option>*/}
+                {/*        ))*/}
+                {/*      : null}*/}
+                {/*  </AvInput>*/}
+                {/*</AvGroup>*/}
+                {/*<AvGroup>*/}
+                {/*  <Label for="cost-management-platform-honestbuilding">*/}
+                {/*    <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.honestbuilding">Honestbuilding</Translate>*/}
+                {/*  </Label>*/}
+                {/*  <AvInput id="cost-management-platform-honestbuilding" type="select" className="form-control" name="honestbuilding.id">*/}
+                {/*    <option value="" key="0" />*/}
+                {/*    {honestBuildings*/}
+                {/*      ? honestBuildings.map(otherEntity => (*/}
+                {/*          <option value={otherEntity.id} key={otherEntity.id}>*/}
+                {/*            {otherEntity.access}*/}
+                {/*          </option>*/}
+                {/*        ))*/}
+                {/*      : null}*/}
+                {/*  </AvInput>*/}
+                {/*</AvGroup>*/}
+                {/*<AvGroup>*/}
+                {/*  <Label for="cost-management-platform-stargate">*/}
+                {/*    <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.stargate">Stargate</Translate>*/}
+                {/*  </Label>*/}
+                {/*  <AvInput id="cost-management-platform-stargate" type="select" className="form-control" name="stargate.id">*/}
+                {/*    <option value="" key="0" />*/}
+                {/*    {starGates*/}
+                {/*      ? starGates.map(otherEntity => (*/}
+                {/*          <option value={otherEntity.id} key={otherEntity.id}>*/}
+                {/*            {otherEntity.role}*/}
+                {/*          </option>*/}
+                {/*        ))*/}
+                {/*      : null}*/}
+                {/*  </AvInput>*/}
+                {/*</AvGroup>*/}
                 <Button tag={Link} id="cancel-save" to="/entity/cost-management-platform" replace color="info">
                   <FontAwesomeIcon icon="arrow-left" />
                   &nbsp;

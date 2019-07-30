@@ -2,16 +2,16 @@
   "cmpAdminPortalApp": {
     "starGate": {
       "home": {
-        "title": "Star Gates",
-        "createLabel": "Create a new Star Gate",
-        "createOrEditLabel": "Create or edit a Star Gate",
-        "notFound": "No Star Gate found"
+        "title": "Star Gate",
+        "createRole": "Create a new Role",
+        "editRole": "Edit a Role",
+        "notFound": "No Role found"
       },
-      "created": "A new Star Gate is created with identifier {{ param }}",
-      "updated": "A Star Gate is updated with identifier {{ param }}",
-      "deleted": "A Star Gate is deleted with identifier {{ param }}",
+      "created": "A Role is created with identifier {{ param }}",
+      "updated": "A Role is updated with identifier {{ param }}",
+      "deleted": "A Role is deleted with identifier {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Star Gate {{ id }}?"
+        "question": "Are you sure you want to delete Role {{ id }}?"
       },
       "detail": {
         "title": "Star Gate"

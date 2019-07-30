@@ -70,9 +70,18 @@ export class StarGateUpdate extends React.Component<IStarGateUpdateProps, IStarG
       <div>
         <Row className="justify-content-center">
           <Col md="8">
-            <h2 id="cmpAdminPortalApp.starGate.home.createOrEditLabel">
-              <Translate contentKey="cmpAdminPortalApp.starGate.home.createOrEditLabel">Create or edit a StarGate</Translate>
-            </h2>
+            {isNew ? (
+              <h2 id="cmpAdminPortalApp.starGate.home.createRole">
+                <Translate contentKey="cmpAdminPortalApp.starGate.home.createRole">Create a Role</Translate>
+              </h2>
+            ) : (
+              <h2 id="cmpAdminPortalApp.starGate.home.editRole">
+                <Translate contentKey="cmpAdminPortalApp.starGate.home.editRole">Edit a Role</Translate>
+              </h2>
+            )}
+            {/*<h2 id="cmpAdminPortalApp.starGate.home.editRole">*/}
+            {/*  <Translate contentKey="cmpAdminPortalApp.starGate.home.editRole">Edit a Role</Translate>*/}
+            {/*</h2>*/}
           </Col>
         </Row>
         <Row className="justify-content-center">

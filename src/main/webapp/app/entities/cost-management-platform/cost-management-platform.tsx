@@ -57,8 +57,8 @@ export class CostManagementPlatform extends React.Component<ICostManagementPlatf
           <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
             <FontAwesomeIcon icon="plus" />
             &nbsp;
-            <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.home.createLabel">
-              Create new Cost Management Platform
+            <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.home.createRole">
+              Create a new Role
             </Translate>
           </Link>
         </h2>
@@ -77,18 +77,18 @@ export class CostManagementPlatform extends React.Component<ICostManagementPlatf
                     <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.access">Access</Translate>{' '}
                     <FontAwesomeIcon icon="sort" />
                   </th>
-                  <th>
-                    <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.honestbuilding">Honestbuilding</Translate>{' '}
-                    <FontAwesomeIcon icon="sort" />
-                  </th>
-                  <th>
-                    <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.honestbuilding">Honestbuilding</Translate>{' '}
-                    <FontAwesomeIcon icon="sort" />
-                  </th>
-                  <th>
-                    <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.stargate">Stargate</Translate>{' '}
-                    <FontAwesomeIcon icon="sort" />
-                  </th>
+                  {/*<th>*/}
+                  {/*  <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.honestbuilding">Honestbuilding</Translate>{' '}*/}
+                  {/*  <FontAwesomeIcon icon="sort" />*/}
+                  {/*</th>*/}
+                  {/*<th>*/}
+                  {/*  <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.honestbuilding">Honestbuilding</Translate>{' '}*/}
+                  {/*  <FontAwesomeIcon icon="sort" />*/}
+                  {/*</th>*/}
+                  {/*<th>*/}
+                  {/*  <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.stargate">Stargate</Translate>{' '}*/}
+                  {/*  <FontAwesomeIcon icon="sort" />*/}
+                  {/*</th>*/}
                   <th />
                 </tr>
               </thead>
@@ -104,31 +104,31 @@ export class CostManagementPlatform extends React.Component<ICostManagementPlatf
                     <td>
                       <Translate contentKey={`cmpAdminPortalApp.Access.${costManagementPlatform.access}`} />
                     </td>
-                    <td>
-                      {costManagementPlatform.honestbuilding ? (
-                        <Link to={`honest-building/${costManagementPlatform.honestbuilding.id}`}>
-                          {costManagementPlatform.honestbuilding.role}
-                        </Link>
-                      ) : (
-                        ''
-                      )}
-                    </td>
-                    <td>
-                      {costManagementPlatform.honestbuilding ? (
-                        <Link to={`honest-building/${costManagementPlatform.honestbuilding.id}`}>
-                          {costManagementPlatform.honestbuilding.access}
-                        </Link>
-                      ) : (
-                        ''
-                      )}
-                    </td>
-                    <td>
-                      {costManagementPlatform.stargate ? (
-                        <Link to={`star-gate/${costManagementPlatform.stargate.id}`}>{costManagementPlatform.stargate.role}</Link>
-                      ) : (
-                        ''
-                      )}
-                    </td>
+                    {/*<td>*/}
+                    {/*  {costManagementPlatform.honestbuilding ? (*/}
+                    {/*    <Link to={`honest-building/${costManagementPlatform.honestbuilding.id}`}>*/}
+                    {/*      {costManagementPlatform.honestbuilding.role}*/}
+                    {/*    </Link>*/}
+                    {/*  ) : (*/}
+                    {/*    ''*/}
+                    {/*  )}*/}
+                    {/*</td>*/}
+                    {/*<td>*/}
+                    {/*  {costManagementPlatform.honestbuilding ? (*/}
+                    {/*    <Link to={`honest-building/${costManagementPlatform.honestbuilding.id}`}>*/}
+                    {/*      {costManagementPlatform.honestbuilding.access}*/}
+                    {/*    </Link>*/}
+                    {/*  ) : (*/}
+                    {/*    ''*/}
+                    {/*  )}*/}
+                    {/*</td>*/}
+                    {/*<td>*/}
+                    {/*  {costManagementPlatform.stargate ? (*/}
+                    {/*    <Link to={`star-gate/${costManagementPlatform.stargate.id}`}>{costManagementPlatform.stargate.role}</Link>*/}
+                    {/*  ) : (*/}
+                    {/*    ''*/}
+                    {/*  )}*/}
+                    {/*</td>*/}
                     <td className="text-right">
                       <div className="btn-group flex-btn-group-container">
                         <Button tag={Link} to={`${match.url}/${costManagementPlatform.id}`} color="info" size="sm">
