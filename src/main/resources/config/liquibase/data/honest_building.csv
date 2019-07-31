@@ -1,11 +1,18 @@
 id;role;access
-1;monitor 1080p Checking Account;FULL
-2;Highway Ergonomic;FULL
-3;New York tangible Mississippi;FULL
-4;hard drive Robust Networked;FULL
-5;Small partnerships;LIMITED
-6;Harbor Montana;FULL
-7;white Brand Money Market Account;LIMITED
-8;Refined Squares;FULL
-9;EXE projection Fresh;FULL
-10;withdrawal;LIMITED
+1;Architect;LIMITED
+2;Construction Specialist;LIMITED
+3;Design Director;LIMITED
+4;Project Administrator;LIMITED
+5;Regional Design Director;LIMITED
+6;Assistant Construction Project Manager;FULL
+7;Assistant Project Manager;FULL
+8;Building Openings;FULL
+9;Construction Director;FULL
+10;Construction Engineer/Estimator;FULL
+11;Construction Project Manager;FULL
+12;Cost Manager;FULL
+13;Delivery Director;FULL
+14;Delivery Manager;FULL
+15;Installation Manager;FULL
+16;Project Delivery Director;FULL
+

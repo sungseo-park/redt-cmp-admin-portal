@@ -1,11 +1,17 @@
 id;role;access
-1;Multi-channelled Licensed;LIMITED
-2;Canyon HDD;FULL
-3;envisioneer Music Public-key;LIMITED
-4;Investment Account;LIMITED
-5;copy convergence;LIMITED
-6;Industrial;FULL
-7;capacitor archive;LIMITED
-8;compress South Georgia and the South Sandwich Islands;LIMITED
-9;bifurcated scalable;LIMITED
-10;deliverables reinvent 24 hour;FULL
+1;Architect;LIMITED
+2;Construction Specialist;LIMITED
+3;Design Director;LIMITED
+4;Project Administrator;LIMITED
+5;Regional Design Director;LIMITED
+6;Assistant Construction Project Manager;FULL
+7;Assistant Project Manager;FULL
+8;Building Openings;FULL
+9;Construction Director;FULL
+10;Construction Engineer/Estimator;FULL
+11;Construction Project Manager;FULL
+12;Cost Manager;FULL
+13;Delivery Director;FULL
+14;Delivery Manager;FULL
+15;Installation Manager;FULL
+16;Project Delivery Director;FULL
