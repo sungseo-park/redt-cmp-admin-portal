@@ -36,15 +36,15 @@ export class Home extends React.Component<IHomeProp> {
           ) : (
             <div>
               <Alert color="warning">
-                <Translate contentKey="global.messages.info.authenticated.prefix">If you want to </Translate>
+                <Translate contentKey="global.messages.info.authenticated.prefix">Click Here To </Translate>
                 <a href={getLoginUrl()} className="alert-link">
                   <Translate contentKey="global.messages.info.authenticated.link">sign in</Translate>
                 </a>
-                <Translate contentKey="global.messages.info.authenticated.suffix">
-                  , you can try the default accounts:
-                  <br />- Administrator (login=&quot;admin&quot; and password=&quot;admin&quot;)
-                  <br />- User (login=&quot;user&quot; and password=&quot;user&quot;).
-                </Translate>
+                {/*<Translate contentKey="global.messages.info.authenticated.suffix">*/}
+                {/*  , you can try the default accounts:*/}
+                {/*  <br />- Administrator (login=&quot;admin&quot; and password=&quot;admin&quot;)*/}
+                {/*  <br />- User (login=&quot;user&quot; and password=&quot;user&quot;).*/}
+                {/*</Translate>*/}
               </Alert>
             </div>
           )}
