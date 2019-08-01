@@ -1,14 +1,13 @@
 {
   "home": {
-    "title": "Welcome, Java Hipster!",
-    "subtitle": "This is your homepage",
+    "title": "Welcome to CMP Admin Portal!",
     "logged": {
       "message": "You are logged in as user \"{{username}}\"."
     },
-    "question": "If you have any question on JHipster:",
+    "question": "If you have any question about CMP:",
     "link": {
-      "homepage": "JHipster homepage",
-      "stackoverflow": "JHipster on Stack Overflow",
+      "homepage": "CMP Technical Home Page",
+      "stackoverflow": "CMP Reference Docs",
       "bugtracker": "JHipster bug tracker",
       "chat": "JHipster public chat room",
       "follow": "follow @java_hipster on Twitter"
