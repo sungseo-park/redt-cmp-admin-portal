@@ -4,6 +4,10 @@
         {
             "fieldName": "role",
             "fieldType": "String"
+        },
+        {
+            "fieldName": "username",
+            "fieldType": "String"
         }
     ],
     "relationships": [],

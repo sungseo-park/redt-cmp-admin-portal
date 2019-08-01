@@ -5,10 +5,10 @@
             "fieldName": "role",
             "fieldType": "String"
         },
-      {
-        "fieldName": "hbId",
-        "fieldType": "Long"
-      },
+        {
+            "fieldName": "hbId",
+            "fieldType": "Long"
+        },
         {
             "fieldName": "access",
             "fieldType": "Access",

@@ -77,7 +77,7 @@ export class CostManagementPlatform extends React.Component<ICostManagementPlatf
                     <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.access">Access</Translate>{' '}
                     <FontAwesomeIcon icon="sort" />
                   </th>
-                  <th className="hand" onclick={this.sort('hbId')}>
+                  <th className="hand" onClick={this.sort('hbId')}>
                     <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.hbId">hbId</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
                   {/*<th>*/}

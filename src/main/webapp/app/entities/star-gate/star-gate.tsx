@@ -57,7 +57,7 @@ export class StarGate extends React.Component<IStarGateProps, IStarGateState> {
           <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
             <FontAwesomeIcon icon="plus" />
             &nbsp;
-            <Translate contentKey="cmpAdminPortalApp.starGate.home.createRole">Create a new Role</Translate>
+            <Translate contentKey="cmpAdminPortalApp.starGate.home.createRole">Create a new user</Translate>
           </Link>
         </h2>
         <div className="table-responsive">
@@ -67,6 +67,9 @@ export class StarGate extends React.Component<IStarGateProps, IStarGateState> {
                 <tr>
                   <th className="hand" onClick={this.sort('id')}>
                     <Translate contentKey="global.field.id">ID</Translate> <FontAwesomeIcon icon="sort" />
+                  </th>
+                  <th className="hand" onClick={this.sort('username')}>
+                    <Translate contentKey="cmpAdminPortalApp.starGate.username">Username</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
                   <th className="hand" onClick={this.sort('role')}>
                     <Translate contentKey="cmpAdminPortalApp.starGate.role">Role</Translate> <FontAwesomeIcon icon="sort" />
@@ -82,6 +85,7 @@ export class StarGate extends React.Component<IStarGateProps, IStarGateState> {
                         {starGate.id}
                       </Button>
                     </td>
+                    <td>{starGate.username}</td>
                     <td>{starGate.role}</td>
                     <td className="text-right">
                       <div className="btn-group flex-btn-group-container">

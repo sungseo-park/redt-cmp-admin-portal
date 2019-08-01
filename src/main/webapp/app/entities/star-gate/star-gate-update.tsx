@@ -72,11 +72,11 @@ export class StarGateUpdate extends React.Component<IStarGateUpdateProps, IStarG
           <Col md="8">
             {isNew ? (
               <h2 id="cmpAdminPortalApp.starGate.home.createRole">
-                <Translate contentKey="cmpAdminPortalApp.starGate.home.createRole">Create a Role</Translate>
+                <Translate contentKey="cmpAdminPortalApp.starGate.home.createRole">Create a new user</Translate>
               </h2>
             ) : (
               <h2 id="cmpAdminPortalApp.starGate.home.editRole">
-                <Translate contentKey="cmpAdminPortalApp.starGate.home.editRole">Edit a Role</Translate>
+                <Translate contentKey="cmpAdminPortalApp.starGate.home.editRole">Edit a user</Translate>
               </h2>
             )}
             {/*<h2 id="cmpAdminPortalApp.starGate.home.editRole">*/}

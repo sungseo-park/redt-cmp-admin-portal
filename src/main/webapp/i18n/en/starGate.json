@@ -3,19 +3,20 @@
     "starGate": {
       "home": {
         "title": "Star Gate",
-        "createRole": "Create a new Role",
-        "editRole": "Edit a Role",
-        "notFound": "No Role found"
+        "createRole": "Create a new user",
+        "editRole": "Edit a User",
+        "notFound": "No User found"
       },
-      "created": "A Role is created with identifier {{ param }}",
-      "updated": "A Role is updated with identifier {{ param }}",
-      "deleted": "A Role is deleted with identifier {{ param }}",
+      "created": "A User is created with identifier {{ param }}",
+      "updated": "A User is updated with identifier {{ param }}",
+      "deleted": "A User is deleted with identifier {{ param }}",
       "delete": {
         "question": "Are you sure you want to delete Role {{ id }}?"
       },
       "detail": {
         "title": "Star Gate"
       },
+      "Username": "Username",
       "role": "Role"
     }
   }
