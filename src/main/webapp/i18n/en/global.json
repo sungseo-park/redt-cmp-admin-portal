@@ -6,7 +6,7 @@
       "home": "Home",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
-        "main": "Entities",
+        "main": "Roles & Access",
         "starGate": "Star Gate",
         "costManagementPlatform": "Cost Management Platform",
         "honestBuilding": "Honest Building",
@@ -86,9 +86,6 @@
     "field": {
       "id": "ID"
     },
-    "ribbon": {
-      "dev": "Development"
-    },
     "item-count": "Showing {{first}} - {{second}} of {{total}} items."
   },
   "entity": {
@@ -135,5 +132,5 @@
     "idexists": "A new {{ entityName }} cannot already have an ID",
     "idnull": "Invalid ID"
   },
-  "footer": "This is your footer"
+  "footer": "Shwetha Anand, Sungseo Park, & Danielle Saypoff"
 }

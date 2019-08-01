@@ -64,10 +64,21 @@ class CostManagementPlatformResource(
             userid = result.userid,
             access = result.access
         )
+
         // Initialize an instance of HB Resource
         val hbResource = HonestBuildingResource(honestBuildingRepository)
+
         // Create a new data with HB object in HB
-        hbResource.createHonestBuilding(honestBuilding)
+        var hbResult = hbResource.createHonestBuilding(honestBuilding)
+
+        // Create a new HB object including HB ID
+        var newhb = HonestBuilding(
+            id = hbResult.body.id
+        )
+        costManagementPlatform.honestbuilding = newhb
+
+        // Update the CPM data with hbId
+        updateCostManagementPlatform(costManagementPlatform)
 
         return ResponseEntity.created(URI("/api/cost-management-platforms/" + result.id))
             .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.id.toString()))
@@ -90,6 +101,19 @@ class CostManagementPlatformResource(
             throw BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull")
         }
         val result = costManagementPlatformRepository.save(costManagementPlatform)
+
+        // Create a HB object with role and access from CMP
+        val honestBuilding = HonestBuilding(
+            id = result.honestbuilding!!.id,
+            access = result.access
+        )
+
+        // Initialize an instance of HB Resource
+        val hbResource = HonestBuildingResource(honestBuildingRepository)
+
+        // Update HB with a new HB object
+        hbResource.updateHonestBuilding(honestBuilding)
+
         return ResponseEntity.ok()
             .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, costManagementPlatform.id.toString()))
             .body(result)
