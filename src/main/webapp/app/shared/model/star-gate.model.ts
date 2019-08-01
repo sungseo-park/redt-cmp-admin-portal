@@ -1,6 +1,8 @@
 export interface IStarGate {
   id?: number;
-  username?: string;
+  staffid?: string;
+  staffname?: string;
+  projectid?: string;
   role?: string;
 }
 

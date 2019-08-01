@@ -90,10 +90,16 @@ export class HonestBuildingUpdate extends React.Component<IHonestBuildingUpdateP
                   </AvGroup>
                 ) : null}
                 <AvGroup>
-                  <Label id="roleLabel" for="honest-building-role">
-                    <Translate contentKey="cmpAdminPortalApp.honestBuilding.role">Role</Translate>
+                  <Label id="useridLabel" for="honest-building-userid">
+                    <Translate contentKey="cmpAdminPortalApp.honestBuilding.userid">UserID</Translate>
                   </Label>
-                  <AvField id="honest-building-role" type="text" name="role" />
+                  <AvField id="honest-building-userid" type="text" name="userid" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="usernameLabel" for="honest-building-username">
+                    <Translate contentKey="cmpAdminPortalApp.honestBuilding.username">Username</Translate>
+                  </Label>
+                  <AvField id="honest-building-username" type="text" name="username" />
                 </AvGroup>
                 <AvGroup>
                   <Label id="accessLabel" for="honest-building-access">

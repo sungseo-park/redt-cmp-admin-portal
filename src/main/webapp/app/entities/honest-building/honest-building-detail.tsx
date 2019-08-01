@@ -30,11 +30,16 @@ export class HonestBuildingDetail extends React.Component<IHonestBuildingDetailP
           </h2>
           <dl className="jh-entity-details">
             <dt>
-              <span id="role">
-                <Translate contentKey="cmpAdminPortalApp.honestBuilding.role">Role</Translate>
+              <span id="userid">
+                <Translate contentKey="cmpAdminPortalApp.honestBuilding.userid">UserID</Translate>
               </span>
             </dt>
-            <dd>{honestBuildingEntity.role}</dd>
+            <dt>
+              <span id="username">
+                <Translate contentKey="cmpAdminPortalApp.honestBuilding.username">UserName</Translate>
+              </span>
+            </dt>
+            <dd>{honestBuildingEntity.username}</dd>
             <dt>
               <span id="access">
                 <Translate contentKey="cmpAdminPortalApp.honestBuilding.access">Access</Translate>

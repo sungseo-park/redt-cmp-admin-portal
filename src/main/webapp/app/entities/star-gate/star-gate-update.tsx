@@ -99,16 +99,22 @@ export class StarGateUpdate extends React.Component<IStarGateUpdateProps, IStarG
                   </AvGroup>
                 ) : null}
                 <AvGroup>
-                  <Label id="useridLabel" for="star-gate-userid">
-                    <Translate contentKey="cmpAdminPortalApp.starGate.userid">UserID</Translate>
+                  <Label id="staffidLabel" for="star-gate-staffid">
+                    <Translate contentKey="cmpAdminPortalApp.starGate.staffid">StaffID</Translate>
                   </Label>
-                  <AvField id="star-gate-userid" type="text" name="userid" />
+                  <AvField id="star-gate-staffid" type="text" name="staffid" />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="usernameLabel" for="star-gate-username">
-                    <Translate contentKey="cmpAdminPortalApp.starGate.username">Username</Translate>
+                  <Label id="staffnameLabel" for="star-gate-staffname">
+                    <Translate contentKey="cmpAdminPortalApp.starGate.staffname">StaffName</Translate>
                   </Label>
-                  <AvField id="star-gate-username" type="text" name="username" />
+                  <AvField id="star-gate-staffname" type="text" name="staffname" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="projectidLabel" for="star-gate-projectid">
+                    <Translate contentKey="cmpAdminPortalApp.starGate.projectid">ProjectID</Translate>
+                  </Label>
+                  <AvField id="star-gate-projectid" type="text" name="projectid" />
                 </AvGroup>
                 <AvGroup>
                   <Label id="roleLabel" for="star-gate-role">

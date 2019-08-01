@@ -30,11 +30,15 @@ export class StarGateDetail extends React.Component<IStarGateDetailProps> {
           <dl className="jh-entity-details">
             <dt>
               <span id="role">
-                <Translate contentKey="cmpAdminPortalApp.starGate.userid">UserID</Translate>
-                <Translate contentKey="cmpAdminPortalApp.starGate.username">Username</Translate>
+                <Translate contentKey="cmpAdminPortalApp.starGate.staffid">StaffID</Translate>
+                <Translate contentKey="cmpAdminPortalApp.starGate.staffname">Staffname</Translate>
+                <Translate contentKey="cmpAdminPortalApp.starGate.projectid">ProjectID</Translate>
                 <Translate contentKey="cmpAdminPortalApp.starGate.role">Role</Translate>
               </span>
             </dt>
+            <dd>{starGateEntity.staffid}</dd>
+            <dd>{starGateEntity.staffname}</dd>
+            <dd>{starGateEntity.projectid}</dd>
             <dd>{starGateEntity.role}</dd>
           </dl>
           <Button tag={Link} to="/entity/star-gate" replace color="info">

@@ -5,8 +5,9 @@ export const enum Access {
 
 export interface IHonestBuilding {
   id?: number;
-  role?: string;
-  access?: Access;
+  userid?: string;
+  username?: string;
+  access?: string;
 }
 
 export const defaultValue: Readonly<IHonestBuilding> = {};

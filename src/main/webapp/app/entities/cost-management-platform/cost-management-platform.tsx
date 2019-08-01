@@ -70,6 +70,18 @@ export class CostManagementPlatform extends React.Component<ICostManagementPlatf
                   <th className="hand" onClick={this.sort('id')}>
                     <Translate contentKey="global.field.id">ID</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
+                  <th className="hand" onClick={this.sort('userid')}>
+                    <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.userid">UserID</Translate>
+                    <FontAwesomeIcon icon="sort" />
+                  </th>
+                  <th className="hand" onClick={this.sort('username')}>
+                    <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.username">UserName</Translate>
+                    <FontAwesomeIcon icon="sort" />
+                  </th>
+                  <th className="hand" onClick={this.sort('projectid')}>
+                    <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.projectid">ProjectID</Translate>
+                    <FontAwesomeIcon icon="sort" />
+                  </th>
                   <th className="hand" onClick={this.sort('role')}>
                     <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.role">Role</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
@@ -100,11 +112,13 @@ export class CostManagementPlatform extends React.Component<ICostManagementPlatf
                         {costManagementPlatform.id}
                       </Button>
                     </td>
+                    <td>{costManagementPlatform.userid}</td>
+                    <td>{costManagementPlatform.username}</td>
+                    <td>{costManagementPlatform.projectid}</td>
                     <td>{costManagementPlatform.role}</td>
                     <td>
                       <Translate contentKey={`cmpAdminPortalApp.Access.${costManagementPlatform.access}`} />
                     </td>
-                    <td>{costManagementPlatform.hbId}</td>
                     {/*<td>*/}
                     {/*  {costManagementPlatform.honestbuilding ? (*/}
                     {/*    <Link to={`honest-building/${costManagementPlatform.honestbuilding.id}`}>*/}

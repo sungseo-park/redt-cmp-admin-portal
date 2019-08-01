@@ -68,11 +68,14 @@ export class StarGate extends React.Component<IStarGateProps, IStarGateState> {
                   <th className="hand" onClick={this.sort('id')}>
                     <Translate contentKey="global.field.id">ID</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
-                  <th className="hand" onClick={this.sort('userid')}>
-                    <Translate contentKey="cmpAdminPortalApp.starGate.username">UserID</Translate> <FontAwesomeIcon icon="sort" />
+                  <th className="hand" onClick={this.sort('staffid')}>
+                    <Translate contentKey="cmpAdminPortalApp.starGate.staffid">StaffID</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
-                  <th className="hand" onClick={this.sort('username')}>
-                    <Translate contentKey="cmpAdminPortalApp.starGate.username">Username</Translate> <FontAwesomeIcon icon="sort" />
+                  <th className="hand" onClick={this.sort('staffname')}>
+                    <Translate contentKey="cmpAdminPortalApp.starGate.staffname">StaffName</Translate> <FontAwesomeIcon icon="sort" />
+                  </th>
+                  <th className="hand" onClick={this.sort('projectid')}>
+                    <Translate contentKey="cmpAdminPortalApp.starGate.projectid">ProjectID</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
                   <th className="hand" onClick={this.sort('role')}>
                     <Translate contentKey="cmpAdminPortalApp.starGate.role">Role</Translate> <FontAwesomeIcon icon="sort" />
@@ -88,7 +91,9 @@ export class StarGate extends React.Component<IStarGateProps, IStarGateState> {
                         {starGate.id}
                       </Button>
                     </td>
-                    <td>{starGate.username}</td>
+                    <td>{starGate.staffid}</td>
+                    <td>{starGate.staffname}</td>
+                    <td>{starGate.projectid}</td>
                     <td>{starGate.role}</td>
                     <td className="text-right">
                       <div className="btn-group flex-btn-group-container">

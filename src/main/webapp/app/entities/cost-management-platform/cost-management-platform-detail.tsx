@@ -30,6 +30,24 @@ export class CostManagementPlatformDetail extends React.Component<ICostManagemen
           </h2>
           <dl className="jh-entity-details">
             <dt>
+              <span id="userid">
+                <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.userid">UserID</Translate>
+              </span>
+            </dt>
+            <dd>{costManagementPlatformEntity.userid}</dd>
+            <dt>
+              <span id="username">
+                <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.username">UserName</Translate>
+              </span>
+            </dt>
+            <dd>{costManagementPlatformEntity.username}</dd>
+            <dt>
+              <span id="projectid">
+                <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.projectid">ProjectID</Translate>
+              </span>
+            </dt>
+            <dd>{costManagementPlatformEntity.projectid}</dd>
+            <dt>
               <span id="role">
                 <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.role">Role</Translate>
               </span>
@@ -41,11 +59,6 @@ export class CostManagementPlatformDetail extends React.Component<ICostManagemen
               </span>
             </dt>
             <dd>{costManagementPlatformEntity.access}</dd>
-            <dt>
-              <span id="hbId">
-                <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.hbId">Role</Translate>
-              </span>
-            </dt>
             {/*<dt>*/}
             {/*  <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.honestbuilding">Honestbuilding</Translate>*/}
             {/*</dt>*/}

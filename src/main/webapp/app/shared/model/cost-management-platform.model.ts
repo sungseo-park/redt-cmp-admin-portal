@@ -9,8 +9,10 @@ export const enum Access {
 export interface ICostManagementPlatform {
   id?: number;
   role?: string;
-  access?: Access;
-  hbId?: number;
+  userid?: string;
+  username?: string;
+  projectid?: string;
+  access?: number;
   honestbuilding?: IHonestBuilding;
   stargate?: IStarGate;
 }

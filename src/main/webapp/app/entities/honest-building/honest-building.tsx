@@ -68,8 +68,11 @@ export class HonestBuilding extends React.Component<IHonestBuildingProps, IHones
                   <th className="hand" onClick={this.sort('id')}>
                     <Translate contentKey="global.field.id">ID</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
-                  <th className="hand" onClick={this.sort('role')}>
-                    <Translate contentKey="cmpAdminPortalApp.honestBuilding.role">Role</Translate> <FontAwesomeIcon icon="sort" />
+                  <th className="hand" onClick={this.sort('userid')}>
+                    <Translate contentKey="cmpAdminPortalApp.honestBuilding.userid">UserID</Translate> <FontAwesomeIcon icon="sort" />
+                  </th>
+                  <th className="hand" onClick={this.sort('username')}>
+                    <Translate contentKey="cmpAdminPortalApp.honestBuilding.username">UserName</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
                   <th className="hand" onClick={this.sort('access')}>
                     <Translate contentKey="cmpAdminPortalApp.honestBuilding.access">Access</Translate> <FontAwesomeIcon icon="sort" />
@@ -85,7 +88,8 @@ export class HonestBuilding extends React.Component<IHonestBuildingProps, IHones
                         {honestBuilding.id}
                       </Button>
                     </td>
-                    <td>{honestBuilding.role}</td>
+                    <td>{honestBuilding.userid}</td>
+                    <td>{honestBuilding.username}</td>
                     <td>
                       <Translate contentKey={`cmpAdminPortalApp.Access.${honestBuilding.access}`} />
                     </td>

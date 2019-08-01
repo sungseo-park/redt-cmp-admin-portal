@@ -19,8 +19,8 @@
         },
         {
             "fieldName": "access",
-            "fieldType": "Access",
-            "fieldValues": "FULL,LIMITED"
+            "fieldType": "Integer",
+            "fieldValues": "1,2"
         }
     ],
     "relationships": [

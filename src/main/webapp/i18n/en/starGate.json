@@ -16,8 +16,9 @@
       "detail": {
         "title": "Star Gate"
       },
-      "userid": "UserID",
-      "username": "Username",
+      "staffid": "StaffID",
+      "staffname": "Staffname",
+      "projectid": "ProjectID",
       "role": "Role"
     }
   }

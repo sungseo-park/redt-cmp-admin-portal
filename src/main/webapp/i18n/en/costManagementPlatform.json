@@ -16,9 +16,11 @@
       "detail": {
         "title": "Cost Management Platform"
       },
+      "userid": "UserID",
+      "username": "UserName",
+      "projectid": "ProjectID",
       "role": "Role",
       "access": "Access",
-      "hbId": "hbId",
       "honestbuilding": "Honestbuilding",
       "stargate": "Stargate"
     }

@@ -1,11 +1,6 @@
-id;role;hbId;access
-1;Multi-channelled Licensed;LIMITED
-2;Canyon HDD;FULL
-3;envisioneer Music Public-key;LIMITED
-4;Investment Account;LIMITED
-5;copy convergence;LIMITED
-6;Industrial;FULL
-7;capacitor archive;LIMITED
-8;compress South Georgia and the South Sandwich Islands;LIMITED
-9;bifurcated scalable;LIMITED
-10;deliverables reinvent 24 hour;FULL
+id;userid;username;projectid;role;access
+1;3429;Josh Park;8890;Architect;LIMITED
+2;9097;Yu Chan;5697;Cost Manager;FULL
+3;6675;Bart Dobkin;8321;MEP Engineer;LIMITED
+4;2411;Gens Saew;7889;Product Manager;FULL
+

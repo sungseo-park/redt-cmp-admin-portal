@@ -113,6 +113,27 @@ export class CostManagementPlatformUpdate extends React.Component<ICostManagemen
                       <AvInput id="cost-management-platform-id" type="text" className="form-control" name="id" required readOnly />
                     </AvGroup>
                     <AvGroup>
+                      <Label id="useridLabel" for="cost-management-platform-userid">
+                        <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.userid">Userid</Translate>
+                      </Label>
+                      <AvInput id="cost-management-platform-userid" type="text" name="userid" required readOnly />
+                      {/*<AvField id="cost-management-platform-userid" type="text" name="userid" />*/}
+                    </AvGroup>
+                    <AvGroup>
+                      <Label id="usernameLabel" for="cost-management-platform-username">
+                        <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.username">UserName</Translate>
+                      </Label>
+                      <AvInput id="cost-management-platform-username" type="text" name="username" required readOnly />
+                      {/*<AvField id="cost-management-platform-username" type="text" name="username" />*/}
+                    </AvGroup>
+                    <AvGroup>
+                      <Label id="projectidLabel" for="cost-management-platform-projectid">
+                        <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.projectid">projectid</Translate>
+                      </Label>
+                      <AvInput id="cost-management-platform-projectid" type="text" name="projectid" required readOnly />
+                      {/*<AvField id="cost-management-platform-projectid" type="text" name="projectid" />*/}
+                    </AvGroup>
+                    <AvGroup>
                       <Label id="roleLabel" for="cost-management-platform-role">
                         <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.role">Role</Translate>
                       </Label>

@@ -16,7 +16,8 @@
       "detail": {
         "title": "Honest Building"
       },
-      "role": "Role",
+      "userid": "UserID",
+      "username": "Username",
       "access": "Access"
     }
   }
