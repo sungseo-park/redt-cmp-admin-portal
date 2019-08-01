@@ -62,6 +62,9 @@ class StarGateResource(
 
         // Create a CMP object using a role from SG
         val costManagementPlatform = CostManagementPlatform(
+            username = result.staffname,
+            userid = result.staffid,
+            projectid = result.projectid,
             role = result.role
         )
         // Initialize an instance of CMP Resource

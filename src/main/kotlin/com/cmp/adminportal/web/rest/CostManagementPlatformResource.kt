@@ -60,7 +60,8 @@ class CostManagementPlatformResource(
 
         // Create a HB object with role and access from CMP
         val honestBuilding = HonestBuilding(
-            role = result.role,
+            username = result.username,
+            userid = result.userid,
             access = result.access
         )
         // Initialize an instance of HB Resource

@@ -28,8 +28,11 @@ class HonestBuilding(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null,
 
-    @Column(name = "role")
-    var role: String? = null,
+    @Column(name = "userid")
+    var userid: String? = null,
+
+    @Column(name = "username")
+    var username: String? = null,
 
     @Enumerated(EnumType.STRING)
     @Column(name = "access")
@@ -51,7 +54,8 @@ class HonestBuilding(
 
     override fun toString() = "HonestBuilding{" +
         "id=$id" +
-        ", role='$role'" +
+        ", userid = '$userid'" +
+        ", username = '$username'" +
         ", access='$access'" +
         "}"
 

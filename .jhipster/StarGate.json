@@ -6,7 +6,15 @@
             "fieldType": "String"
         },
         {
-            "fieldName": "username",
+           "fieldName": "staffid",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "projectid",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "staffname",
             "fieldType": "String"
         }
     ],

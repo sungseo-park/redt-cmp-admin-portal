@@ -120,13 +120,6 @@ export class CostManagementPlatformUpdate extends React.Component<ICostManagemen
                       {/*<AvField id="cost-management-platform-role" type="text" name="role" />*/}
                     </AvGroup>
                     <AvGroup>
-                      <Label id="hbId" for="cost-management-platform-hbId">
-                        <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.hbId">hbId</Translate>
-                      </Label>
-                      <AvInput id="cost-management-platform-hbId" type="text" name="hbId" required readOnly />
-                      {/*<AvField id="cost-management-platform-role" type="text" name="role" />*/}
-                    </AvGroup>
-                    <AvGroup>
                       <Label id="accessLabel" for="cost-management-platform-access">
                         <Translate contentKey="cmpAdminPortalApp.costManagementPlatform.access">Access</Translate>
                       </Label>

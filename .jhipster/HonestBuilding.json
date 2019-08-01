@@ -2,13 +2,17 @@
     "name": "HonestBuilding",
     "fields": [
         {
-            "fieldName": "role",
-            "fieldType": "String"
+          "fieldName": "username",
+          "fieldType": "String"
+        },
+        {
+          "fieldName": "userid",
+          "fieldType": "String"
         },
         {
             "fieldName": "access",
-            "fieldType": "Access",
-            "fieldValues": "FULL,LIMITED"
+            "fieldType":  "Integer",
+            "fieldValues": "1,2"
         }
     ],
     "relationships": [],

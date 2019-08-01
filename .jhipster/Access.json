@@ -1,0 +1,19 @@
+{
+  "name": "Access",
+  "fields": [
+    {
+      "fieldName": "access",
+      "fieldType": "String"
+    },
+  ],
+  "relationships": [],
+  "changelogDate": "20190801203040",
+  "entityTableName": "access_table",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "clientRootFolder": "",
+  "applications": "*"
+}

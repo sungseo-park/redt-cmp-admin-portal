@@ -30,15 +30,21 @@ class CostManagementPlatform(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null,
 
+    @Column(name = "userid")
+    var userid: String? = null,
+
+    @Column(name = "username")
+    var username: String? = null,
+
+    @Column(name = "projectid")
+    var projectid: String? = null,
+
     @Column(name = "role")
     var role: String? = null,
 
     @Enumerated(EnumType.STRING)
     @Column(name = "access")
     var access: Access? = Access.LIMITED,
-
-    @Column(name = "hbid")
-    var hbId: Long? = null,
 
     @OneToOne
     @JoinColumn(unique = true)
@@ -64,9 +70,10 @@ class CostManagementPlatform(
 
     override fun toString() = "CostManagementPlatform{" +
         "id=$id" +
+        ", userid = '$userid'" +
+        ", username = '$username'" +
+        ", projectid = '$projectid'" +
         ", role='$role'" +
-        ", access='$access'" +
-        ", hbId='$hbId" +
         "}"
 
     companion object {

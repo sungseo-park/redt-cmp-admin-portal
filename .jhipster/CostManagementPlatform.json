@@ -6,8 +6,16 @@
             "fieldType": "String"
         },
         {
-            "fieldName": "hbId",
-            "fieldType": "Long"
+            "fieldName": "username",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userid",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "projectid",
+            "fieldType": "String"
         },
         {
             "fieldName": "access",

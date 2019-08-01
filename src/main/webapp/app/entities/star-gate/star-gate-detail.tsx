@@ -30,6 +30,7 @@ export class StarGateDetail extends React.Component<IStarGateDetailProps> {
           <dl className="jh-entity-details">
             <dt>
               <span id="role">
+                <Translate contentKey="cmpAdminPortalApp.starGate.userid">UserID</Translate>
                 <Translate contentKey="cmpAdminPortalApp.starGate.username">Username</Translate>
                 <Translate contentKey="cmpAdminPortalApp.starGate.role">Role</Translate>
               </span>

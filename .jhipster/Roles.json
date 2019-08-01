@@ -1,0 +1,23 @@
+{
+  "name": "Roles",
+  "fields": [
+    {
+      "fieldName": "role",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "accessid",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20190801203040",
+  "entityTableName": "role_table",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "clientRootFolder": "",
+  "applications": "*"
+}

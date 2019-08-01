@@ -24,8 +24,14 @@ class StarGate(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null,
 
-    @Column(name = "username")
-    var username: String? = null,
+    @Column(name = "staffid")
+    var staffid: String? = null,
+
+    @Column(name = "staffname")
+    var staffname: String? = null,
+
+    @Column(name = "projectid")
+    var projectid: String? = null,
 
     @Column(name = "role")
     var role: String? = null
@@ -46,7 +52,9 @@ class StarGate(
 
     override fun toString() = "StarGate{" +
         "id=$id" +
-        "username = '$username'" +
+        ", staffid = '$staffid'" +
+        ", staffname = '$staffname'" +
+        ", projectid = '$projectid'" +
         ", role='$role'" +
         "}"
 

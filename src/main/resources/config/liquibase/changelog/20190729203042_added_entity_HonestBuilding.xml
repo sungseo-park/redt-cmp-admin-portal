@@ -16,10 +16,12 @@
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="role" type="varchar(255)">
+            <column name="userid" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-
+            <column name="username" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
             <column name="access" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
@@ -48,7 +50,8 @@
                   separator=";"
                   tableName="honest_building">
             <column name="id" type="numeric"/>
-            <column name="role" type="string"/>
+            <column name="userid" type="string"/>
+            <column name="username" type="string"/>
             <column name="access" type="string"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here, do not remove-->
         </loadData>

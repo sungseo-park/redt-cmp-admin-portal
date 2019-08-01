@@ -16,7 +16,13 @@
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="username" type="varchar(255)">
+            <column name="staffid" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="staffname" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="projectid" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <column name="role" type="varchar(255)">
@@ -47,7 +53,9 @@
                   separator=";"
                   tableName="star_gate">
             <column name="id" type="numeric"/>
-            <column name="username" type="string"/>
+            <column name="staffid" type="string"/>
+            <column name="staffname" type="string"/>
+            <column name="projectid" type="string"/>
             <column name="role" type="string"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here, do not remove-->
         </loadData>
