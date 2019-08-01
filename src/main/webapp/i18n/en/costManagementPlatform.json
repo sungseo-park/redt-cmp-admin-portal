@@ -3,15 +3,15 @@
     "costManagementPlatform": {
       "home": {
         "title": "Cost Management Platform",
-        "createRole": "Create a new Role",
+        "createRole": "Create a new user",
         "editAccess": "Edit a Access",
         "notFound": "No Cost Management Platform found"
       },
-      "created": "A new role is created with identifier {{ param }}",
-      "updated": "A role is updated with identifier {{ param }}",
-      "deleted": "A role is deleted with identifier {{ param }}",
+      "created": "A new user is created with identifier {{ param }}",
+      "updated": "A user is updated with identifier {{ param }}",
+      "deleted": "A user is deleted with identifier {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete role {{ id }}?"
+        "question": "Are you sure you want to delete user {{ id }}?"
       },
       "detail": {
         "title": "Cost Management Platform"

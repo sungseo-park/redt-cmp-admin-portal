@@ -99,6 +99,12 @@ export class StarGateUpdate extends React.Component<IStarGateUpdateProps, IStarG
                   </AvGroup>
                 ) : null}
                 <AvGroup>
+                  <Label id="usernameLabel" for="star-gate-username">
+                    <Translate contentKey="cmpAdminPortalApp.starGate.username">Username</Translate>
+                  </Label>
+                  <AvField id="star-gate-username" type="text" name="username" />
+                </AvGroup>
+                <AvGroup>
                   <Label id="roleLabel" for="star-gate-role">
                     <Translate contentKey="cmpAdminPortalApp.starGate.role">Role</Translate>
                   </Label>
