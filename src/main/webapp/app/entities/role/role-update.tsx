@@ -82,19 +82,28 @@ export class RoleUpdate extends React.Component<IRoleUpdateProps, IRoleUpdateSta
             ) : (
               <AvForm model={isNew ? {} : roleEntity} onSubmit={this.saveEntity}>
                 {!isNew ? (
+                  <div>
+                    <AvGroup>
+                      <Label for="role-id">
+                        <Translate contentKey="global.field.id">ID</Translate>
+                      </Label>
+                      <AvInput id="role-id" type="text" className="form-control" name="id" required readOnly />
+                    </AvGroup>
+                    <AvGroup>
+                      <Label id="roleLabel" for="role-role">
+                        <Translate contentKey="cmpAdminPortalApp.role.role">Role</Translate>
+                      </Label>
+                      <AvField id="role-role" type="text" name="role" required readOnly />
+                    </AvGroup>
+                  </div>
+                ) : (
                   <AvGroup>
-                    <Label for="role-id">
-                      <Translate contentKey="global.field.id">ID</Translate>
+                    <Label id="roleLabel" for="role-role">
+                      <Translate contentKey="cmpAdminPortalApp.role.role">Role</Translate>
                     </Label>
-                    <AvInput id="role-id" type="text" className="form-control" name="id" required readOnly />
+                    <AvField id="role-role" type="text" name="role" />
                   </AvGroup>
-                ) : null}
-                <AvGroup>
-                  <Label id="roleLabel" for="role-role">
-                    <Translate contentKey="cmpAdminPortalApp.role.role">Role</Translate>
-                  </Label>
-                  <AvField id="role-role" type="text" name="role" />
-                </AvGroup>
+                )}
                 <AvGroup>
                   <Label id="accessLabel" for="role-access">
                     <Translate contentKey="cmpAdminPortalApp.role.access">Access</Translate>
