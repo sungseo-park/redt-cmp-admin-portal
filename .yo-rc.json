@@ -46,7 +46,9 @@
     ],
     "enableTranslation": true,
     "nativeLanguage": "en",
-    "languages": ["en"],
+    "languages": [
+      "en"
+    ],
     "blueprint": "generator-jhipster-kotlin",
     "blueprintVersion": "1.0.0"
   }

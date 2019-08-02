@@ -19,6 +19,10 @@ import costManagementPlatform, {
 import honestBuilding, {
   HonestBuildingState
 } from 'app/entities/honest-building/honest-building.reducer';
+// prettier-ignore
+import role, {
+  RoleState
+} from 'app/entities/role/role.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -30,6 +34,7 @@ export interface IRootState {
   readonly starGate: StarGateState;
   readonly costManagementPlatform: CostManagementPlatformState;
   readonly honestBuilding: HonestBuildingState;
+  readonly role: RoleState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -43,6 +48,7 @@ const rootReducer = combineReducers<IRootState>({
   starGate,
   costManagementPlatform,
   honestBuilding,
+  role,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });
