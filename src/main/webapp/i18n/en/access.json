@@ -1,9 +1,22 @@
 {
   "cmpAdminPortalApp": {
-    "Access": {
-      "null": "",
-      "FULL": "FULL",
-      "LIMITED": "LIMITED"
+    "access": {
+      "home": {
+        "title": "Accesses",
+        "createLabel": "Create a new Access",
+        "createOrEditLabel": "Create or edit a Access",
+        "notFound": "No Access found"
+      },
+      "created": "A new Access is created with identifier {{ param }}",
+      "updated": "A Access is updated with identifier {{ param }}",
+      "deleted": "A Access is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Access {{ id }}?"
+      },
+      "detail": {
+        "title": "Access"
+      },
+      "accessLevel": "Access Level"
     }
   }
 }

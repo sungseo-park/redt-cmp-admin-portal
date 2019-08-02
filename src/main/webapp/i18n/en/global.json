@@ -10,6 +10,8 @@
         "starGate": "Star Gate",
         "costManagementPlatform": "Cost Management Platform",
         "honestBuilding": "Honest Building",
+        "access": "Access",
+        "role": "Role",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
