@@ -19,8 +19,7 @@
         },
         {
             "fieldName": "access",
-            "fieldType": "Integer",
-            "fieldValues": "1,2"
+            "fieldType": "Long",
         }
     ],
     "relationships": [
