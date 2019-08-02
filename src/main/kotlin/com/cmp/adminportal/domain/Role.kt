@@ -28,7 +28,10 @@ class Role(
     var role: String? = null,
 
     @Column(name = "access_id")
-    var accessId: Long? = null
+    var accessId: Long? = null,
+
+    @Column(name = "role_id")
+    var roleId: String? = null
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
 ) : Serializable {
@@ -48,6 +51,7 @@ class Role(
         "id=$id" +
         ", role='$role'" +
         ", accessId=$accessId" +
+        ", roleId='$roleId'" +
         "}"
 
     companion object {

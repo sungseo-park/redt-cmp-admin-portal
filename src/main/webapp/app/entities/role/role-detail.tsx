@@ -40,6 +40,12 @@ export class RoleDetail extends React.Component<IRoleDetailProps> {
               </span>
             </dt>
             <dd>{roleEntity.accessId}</dd>
+            <dt>
+              <span id="roleId">
+                <Translate contentKey="cmpAdminPortalApp.role.roleId">Role Id</Translate>
+              </span>
+            </dt>
+            <dd>{roleEntity.roleId}</dd>
           </dl>
           <Button tag={Link} to="/entity/role" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

@@ -101,6 +101,12 @@ export class RoleUpdate extends React.Component<IRoleUpdateProps, IRoleUpdateSta
                   </Label>
                   <AvField id="role-accessId" type="string" className="form-control" name="accessId" />
                 </AvGroup>
+                <AvGroup>
+                  <Label id="roleIdLabel" for="role-roleId">
+                    <Translate contentKey="cmpAdminPortalApp.role.roleId">Role Id</Translate>
+                  </Label>
+                  <AvField id="role-roleId" type="text" name="roleId" />
+                </AvGroup>
                 <Button tag={Link} id="cancel-save" to="/entity/role" replace color="info">
                   <FontAwesomeIcon icon="arrow-left" />
                   &nbsp;

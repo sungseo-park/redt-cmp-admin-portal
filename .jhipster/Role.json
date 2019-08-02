@@ -10,6 +10,10 @@
         {
             "fieldName": "accessId",
             "fieldType": "Long"
+        },
+        {
+            "fieldName": "roleId",
+            "fieldType": "String"
         }
     ],
     "changelogDate": "20190802140246",

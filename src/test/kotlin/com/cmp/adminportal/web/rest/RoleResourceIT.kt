@@ -101,6 +101,7 @@ class RoleResourceIT {
         val testRole = roleList[roleList.size - 1]
         assertThat(testRole.role).isEqualTo(DEFAULT_ROLE)
         assertThat(testRole.accessId).isEqualTo(DEFAULT_ACCESS_ID)
+        assertThat(testRole.roleId).isEqualTo(DEFAULT_ROLE_ID)
     }
 
     @Test
@@ -136,6 +137,7 @@ class RoleResourceIT {
             .andExpect(jsonPath("$.[*].id").value(hasItem(role.id?.toInt())))
             .andExpect(jsonPath("$.[*].role").value(hasItem(DEFAULT_ROLE)))
             .andExpect(jsonPath("$.[*].accessId").value(hasItem(DEFAULT_ACCESS_ID.toInt())))
+            .andExpect(jsonPath("$.[*].roleId").value(hasItem(DEFAULT_ROLE_ID)))
     }
 
     @Test
@@ -154,6 +156,7 @@ class RoleResourceIT {
             .andExpect(jsonPath("$.id").value(id.toInt()))
             .andExpect(jsonPath("$.role").value(DEFAULT_ROLE))
             .andExpect(jsonPath("$.accessId").value(DEFAULT_ACCESS_ID.toInt()))
+            .andExpect(jsonPath("$.roleId").value(DEFAULT_ROLE_ID))
     }
 
     @Test
@@ -180,6 +183,7 @@ class RoleResourceIT {
         em.detach(updatedRole)
         updatedRole.role = UPDATED_ROLE
         updatedRole.accessId = UPDATED_ACCESS_ID
+        updatedRole.roleId = UPDATED_ROLE_ID
 
         restRoleMockMvc.perform(
             put("/api/roles")
@@ -193,6 +197,7 @@ class RoleResourceIT {
         val testRole = roleList[roleList.size - 1]
         assertThat(testRole.role).isEqualTo(UPDATED_ROLE)
         assertThat(testRole.accessId).isEqualTo(UPDATED_ACCESS_ID)
+        assertThat(testRole.roleId).isEqualTo(UPDATED_ROLE_ID)
     }
 
     @Test
@@ -259,6 +264,9 @@ class RoleResourceIT {
         private const val DEFAULT_ACCESS_ID: Long = 1L
         private const val UPDATED_ACCESS_ID: Long = 2L
 
+        private const val DEFAULT_ROLE_ID: String = "AAAAAAAAAA"
+        private const val UPDATED_ROLE_ID = "BBBBBBBBBB"
+
         /**
          * Create an entity for this test.
          *
@@ -269,7 +277,8 @@ class RoleResourceIT {
         fun createEntity(em: EntityManager): Role {
             val role = Role(
                 role = DEFAULT_ROLE,
-                accessId = DEFAULT_ACCESS_ID
+                accessId = DEFAULT_ACCESS_ID,
+                roleId = DEFAULT_ROLE_ID
             )
 
             return role
@@ -285,7 +294,8 @@ class RoleResourceIT {
         fun createUpdatedEntity(em: EntityManager): Role {
             val role = Role(
                 role = UPDATED_ROLE,
-                accessId = UPDATED_ACCESS_ID
+                accessId = UPDATED_ACCESS_ID,
+                roleId = UPDATED_ROLE_ID
             )
 
             return role

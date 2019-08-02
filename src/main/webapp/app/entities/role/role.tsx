@@ -74,6 +74,9 @@ export class Role extends React.Component<IRoleProps, IRoleState> {
                   <th className="hand" onClick={this.sort('accessId')}>
                     <Translate contentKey="cmpAdminPortalApp.role.accessId">Access Id</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
+                  <th className="hand" onClick={this.sort('roleId')}>
+                    <Translate contentKey="cmpAdminPortalApp.role.roleId">Role Id</Translate> <FontAwesomeIcon icon="sort" />
+                  </th>
                   <th />
                 </tr>
               </thead>
@@ -87,6 +90,7 @@ export class Role extends React.Component<IRoleProps, IRoleState> {
                     </td>
                     <td>{role.role}</td>
                     <td>{role.accessId}</td>
+                    <td>{role.roleId}</td>
                     <td className="text-right">
                       <div className="btn-group flex-btn-group-container">
                         <Button tag={Link} to={`${match.url}/${role.id}`} color="info" size="sm">
