@@ -93,7 +93,7 @@ export class RoleUpdate extends React.Component<IRoleUpdateProps, IRoleUpdateSta
                   <Label id="roleLabel" for="role-role">
                     <Translate contentKey="cmpAdminPortalApp.role.role">Role</Translate>
                   </Label>
-                  <AvField id="role-role" type="text" name="role" />
+                  <AvField id="role-role" type="text" name="role" required readOnly/>
                 </AvGroup>
                 <AvGroup>
                   <Label id="accessLabel" for="role-access">
