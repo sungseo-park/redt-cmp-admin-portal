@@ -4,17 +4,24 @@
     "relationships": [],
     "fields": [
         {
-            "fieldName": "accessLevel",
+            "fieldName": "role",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "accessId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "roleId",
             "fieldType": "String"
         }
     ],
-    "changelogDate": "20190802134753",
+    "changelogDate": "20190802140246",
     "dto": "no",
     "searchEngine": false,
     "service": "serviceImpl",
-    "entityTableName": "access",
+    "entityTableName": "role",
     "databaseType": "sql",
     "jpaMetamodelFiltering": false,
     "pagination": "pagination"
-
 }
