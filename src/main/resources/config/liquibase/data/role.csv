@@ -1,11 +1,30 @@
 id;role;access
-1;mobile Fish;LIMITED
-2;Trace;FULL
-3;Tasty Metal Bacon;FULL
-4;Home Loan Account;FULL
-5;Namibia;FULL
-6;Multi-channelled Licensed;FULL
-7;Canyon HDD;FULL
-8;envisioneer Music Public-key;FULL
-9;Investment Account;LIMITED
-10;copy convergence;FULL
+1;Architect;LIMITED
+2;Architectural Technician;LIMITED
+3;Construction Specialist;LIMITED
+4;Construction Support;LIMITED
+5;Construction Technology Specialist;LIMITED
+6;Construction Warehouse;LIMITED
+7;Design Director;LIMITED
+8;Key Accounts Delivery Manager;LIMITED
+9;Project Administrator;LIMITED
+10;Regional Design Director;LIMITED
+11;Regional Head of Project Delivery;LIMITED
+12;Supply Chain Analyst;LIMITED
+13;VP Development;LIMITED
+14;A/V;LIMITED
+15;Assistant Construction Project Manager;FULL
+16;Assistant Construction Superintendent;FULL
+17;Assistant Project Manager;FULL
+18;Building Openings;FULL
+19;Commercial Manager;FULL
+20;Construction Accountant;FULL
+21;Construction Associate;FULL
+22;Construction Cluster Lead;FULL
+23;Construction Director;FULL
+24;Construction Engineer;FULL
+25;Construction Engineer/Estimator;FULL
+26;Construction Estimator;FULL
+27;Construction Expediter;FULL
+28;Construction Insurance Manager;FULL
+29;Construction Lead Estimator;FULL
