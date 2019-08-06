@@ -87,20 +87,3 @@ Navigate to **API** > **Authorization Servers**, click the **Authorization Serve
 
 After making these changes, you should be good to go! If you have any issues, please post them to [Stack Overflow](https://stackoverflow.com/questions/tagged/jhipster). Make sure to tag your question with "jhipster" and "okta".
 
-### Service workers
-
-Service workers are commented by default, to enable them please uncomment the following code.
-
-- The service worker registering script in index.html
-
-```html
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./service-worker.js').then(function() {
-      console.log('Service Worker Registered');
-    });
-  }
-</script>
-```
-
-Note: workbox creates the respective service worker and dynamically generate the `service-worker.js`
